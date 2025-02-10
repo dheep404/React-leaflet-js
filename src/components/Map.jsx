@@ -6,6 +6,8 @@ import "leaflet-draw/dist/leaflet.draw.css";
 import "leaflet-draw";
 import "leaflet.locatecontrol/dist/L.Control.Locate.css";
 import "leaflet.locatecontrol";
+import "leaflet.fullscreen/Control.FullScreen.css";
+import "leaflet.fullscreen";
 
 //random lat long coordinates for england
 const randomLatLng = () => {
@@ -18,7 +20,7 @@ function Map({ addPoint }) {
   const map = useMap();
 
   useEffect(() => {
-    // Add locate control part
+    // Add location control
     L.control
       .locate({
         position: "topleft",
@@ -114,10 +116,15 @@ function Map({ addPoint }) {
       map.setView(addPoint, 15);
     }
 
+    // Add fullscreen control
+    L.control.fullscreen({
+      position: 'topright'
+    }).addTo(map);
+
     // Add jump to location button
     const customControl = L.Control.extend({
       options: {
-        position: 'topright'
+        position: 'bottomright'
       },
       onAdd: function () {
         const container = L.DomUtil.create('button', 'leaflet-bar leaflet-control leaflet-control-custom');

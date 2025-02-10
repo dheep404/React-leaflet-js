@@ -16,14 +16,14 @@ function App() {
         center={[52.3555, -1.1743]}
         zoom={7}
         scrollWheelZoom={true}
-        minZoom={1}
-        maxZoom={19}
+        minZoom={6}
+        maxZoom={18}
         maxBounds={[
           [49.528423, -10.76418],
           [61.331151, 1.9134116],
         ]}
       >
-        <LayersControl position="topright">
+        <LayersControl position="bottomleft">
           <BaseLayer checked name="OSM Standard">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
