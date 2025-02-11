@@ -2,17 +2,17 @@ import { useEffect } from "react";
 import { useMap } from "react-leaflet";
 import PropTypes from 'prop-types';
 import L from "leaflet";
-import "leaflet-draw/dist/leaflet.draw.css";
-import "leaflet-draw";
 import "leaflet.locatecontrol/dist/L.Control.Locate.css";
-import "leaflet.locatecontrol";
 import "leaflet.fullscreen/Control.FullScreen.css";
+import "leaflet-draw/dist/leaflet.draw.css";
+import "leaflet.locatecontrol";
 import "leaflet.fullscreen";
+import "leaflet-draw";
 
 //random lat long coordinates for england
 const randomLatLng = () => {
-  const lat = 49.528423 + Math.random() * (61.331151 - 49.528423);
-  const lng = -10.76418 + Math.random() * (1.9134116 + 10.76418);
+  const lat = 49.9 + Math.random() * (55.8 - 49.9);
+  const lng = -6.4 + Math.random() * (1.8 + 6.4);
   return [lat, lng];
 };
 

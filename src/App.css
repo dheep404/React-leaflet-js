@@ -13,10 +13,30 @@ body, html {
   border: solid 2px black;
 }
 
-/* Hide zoom controls on mobile devices */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.os-road-bg {
+  background: #d5eff8 !important;
+}
+
+.os-outdoor-bg {
+  background: #a9ddef !important;
+}
+
+.os-light-bg {
+  background: #d7e0e5 !important;
+}
+
+.esri-satellite-bg {
+  background: none;
+}
+
 @media (max-width: 375px) {
   .leaflet-control-zoom-in, 
   .leaflet-control-zoom-out {
     display: none !important;
   }
 }
+
