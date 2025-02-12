@@ -65,7 +65,7 @@ function App() {
         zoom={7}
         scrollWheelZoom={true}
         minZoom={7}
-        maxZoom={17}
+        maxZoom={16}
         maxBoundsViscosity={1.0}
         maxBounds={[
           [49.528423, -10.76418],
